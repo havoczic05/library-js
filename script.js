@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     this.title = title || "Unknown Title";
     this.author = author || "Unknown Author";
     this.pages = typeof pages === 'number' && pages > 0 ? pages : 0;
-    this.read = read === "Read" || read === "Not read" ? read : "Not read";
+    this.read = read === "read" || read === "not-read" ? read : "Not read";
   }
 
   function addBookToLibrary(title, author, pages, read) {
@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="text">
               <p class="h3">${book.title}</p>
               <p class="p">${book.author} - ${book.pages} pages</p>
-              <div class="icon-box ${book.read === "Read" ? "read-book" : "unread-book"}">
-                <p class="span">${book.read === "Read" ? "Read Book" : "Unread Book"}</p>
+              <div class="icon-box ${book.read === "read" ? "read-book" : "unread-book"}">
+                <p class="span">${book.read === "read" ? "Read Book" : "Unread Book"}</p>
               </div>
             </div>
           </div>`);
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
     const read = document.querySelector("#read").value;
-
+    console.log(read);
     addBookToLibrary(title, author, pages, read);
     displayAllLibraryBooks();
     modal.close();
