@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="text">
               <p class="h3">${book.title}</p>
               <p class="p">${book.author} - ${book.pages} pages</p>
-              <div class="icon-box">
+              <div class="icon-box ${book.read === "Read" ? "read-book" : "unread-book"}">
                 <p class="span">${book.read === "Read" ? "Read Book" : "Unread Book"}</p>
               </div>
             </div>

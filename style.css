@@ -125,11 +125,14 @@
   margin-top: 15px;
   width: 70%;
   padding: 10px;
-  background-color: #e3fff9;
+  background-color: #e66465;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  & :hover {
+    cursor: pointer;
+  }
 }
 
 .icon-box svg {
@@ -157,7 +160,8 @@
   font-family: 'Lucida Sans' sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #9198e5;
+  color: #ffffff;
+
 }
 
 
@@ -209,4 +213,11 @@ dialog {
   display: flex;
   align-items: top;
   justify-content: right;
+}
+
+.icon-box.read-book {
+  background-color: green;
+  & > p {
+    color: white;
+  }
 }
