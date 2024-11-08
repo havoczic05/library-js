@@ -58,11 +58,26 @@ document.addEventListener("DOMContentLoaded", () => {
         displayAllLibraryBooks();
       });
     });
+
+    const toggleReadBtns = document.querySelectorAll(".icon-box");
+    toggleReadBtns.forEach((toggleReadBtn, index) => {
+      toggleReadBtn.addEventListener("click", () => {
+        toggleRead(index);
+        displayAllLibraryBooks();
+      });
+    });
   }
 
   function removeBook(index) {
     if (index > -1 && index < myLibrary.length) {
       myLibrary.splice(index, 1);
+      console.log(myLibrary);
+    }
+  }
+
+  function toggleRead(index) {
+    if (index > -1 && index < myLibrary.length) {
+      myLibrary[index].read = myLibrary[index].read === "Read" ? "Not read" : "Read";
       console.log(myLibrary);
     }
   }

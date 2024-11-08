@@ -18,7 +18,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  min-height: 550px;
+  min-width: 1200px;
   margin: 0 auto 0 12px;
   max-width: 1500px;
   padding: 16px;
@@ -32,10 +33,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1500px;
   padding: 16px;
   border-radius: 10px;
-
 
   & input,
   select {
@@ -57,6 +56,7 @@
     cursor: pointer;
   }
 }
+
 #modal-btn {
   padding: 10px;
   margin: 10px;
@@ -70,6 +70,7 @@
     color: white;
   }
 }
+
 /* imported card */
 /* From Uiverse.io by JohnnyCSilva */
 .card {
@@ -130,6 +131,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   & :hover {
     cursor: pointer;
   }
@@ -185,11 +187,9 @@ aside {
   justify-content: flex-start;
   margin: 0 auto;
   max-width: 250px;
-
   padding: 16px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
 
   & h1 {
     text-align: center;
@@ -200,6 +200,7 @@ aside {
     margin: 30px;
   }
 }
+
 dialog {
   width: 300px;
   border-radius: 10px;
@@ -209,6 +210,7 @@ dialog {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .close-btn-container {
   display: flex;
   align-items: top;
@@ -217,7 +219,8 @@ dialog {
 
 .icon-box.read-book {
   background-color: green;
-  & > p {
+
+  &>p {
     color: white;
   }
 }
