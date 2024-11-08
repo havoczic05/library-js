@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <p class="h3">${book.title}</p>
               <p class="p">${book.author} - ${book.pages} pages</p>
               <div class="icon-box ${book.read === "read" ? "read-book" : "unread-book"}">
-                <p class="span">${book.read === "read" ? "Read Book" : "Unread Book"}</p>
+                <p class="span">${book.read === "read" ? "Read Book" : "unread Book"}</p>
               </div>
             </div>
           </div>`);
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function toggleRead(index) {
     if (index > -1 && index < myLibrary.length) {
-      myLibrary[index].read = myLibrary[index].read === "Read" ? "Not read" : "Read";
+      myLibrary[index].read = myLibrary[index].read === "read" ? "not-read" : "read";
       console.log(myLibrary);
     }
   }
